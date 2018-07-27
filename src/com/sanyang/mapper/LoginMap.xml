@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper SYSTEM "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.sanyang.mapper.LoginMap">
+<select id="getAll" resultType="com.sanyang.vo.LoginsInfo">
+select * from logins
+</select>
+<select id="sel" parameterType="com.sanyang.vo.LoginsInfo" resultType="com.sanyang.vo.LoginsInfo">
+select * from logins where lname=#{lname} and lpwd=#{lpwd}
+
+</select>
+</mapper>
